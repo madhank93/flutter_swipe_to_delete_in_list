@@ -15,9 +15,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final List<String> items =
-      List<String>.generate(30, (index) => 'Items ${index+1}');
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  List<String> items = List<String>.generate(30, (index) => 'Items ${index+1}');
+
+  @override
+  void setState(fn) {
+    List<String> items ;
+  }
 
   @override
   Widget build(BuildContext context) {
